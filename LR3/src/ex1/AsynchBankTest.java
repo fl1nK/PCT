@@ -1,3 +1,5 @@
+package ex1;
+
 public class AsynchBankTest {
     public static final int NACCOUNTS = 10;
     public static final int INITIAL_BALANCE = 10000;

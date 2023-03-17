@@ -1,3 +1,5 @@
+package ex1;
+
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerArray;
 import java.util.concurrent.atomic.AtomicLong;
@@ -9,7 +11,7 @@ public class Bank {
 //    private final int[] accounts;
 //    private long ntransacts = 0;
 //    private final ReentrantLock lock = new ReentrantLock();
-//    public Bank(int n, int initialBalance){
+//    public ex1.Bank(int n, int initialBalance){
 //        accounts = new int[n];
 //        int i;
 //        for (i = 0; i < accounts.length; i++)

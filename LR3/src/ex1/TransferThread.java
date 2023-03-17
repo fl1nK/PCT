@@ -1,3 +1,5 @@
+package ex1;
+
 public class TransferThread extends Thread {
     private Bank bank;
     private int fromAccount;
