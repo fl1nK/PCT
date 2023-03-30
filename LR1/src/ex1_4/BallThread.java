@@ -16,9 +16,7 @@ public class BallThread extends Thread {
                     System.out.println("Thread name = "+ Thread.currentThread().getName()+"status = "  + Thread.currentThread().getState()+"isAlive = " +Thread.currentThread().isAlive()+"isInterrupted = " +Thread.currentThread().isInterrupted());
                     break;
                 }
-               // System.out.println("Thread name = "+ Thread.currentThread().getName()+"status = "  + Thread.currentThread().getState()+"isAlive = " +Thread.currentThread().isAlive()+"isInterrupted = " +Thread.currentThread().isInterrupted());
                 Thread.sleep(5);
-
             }
         } catch(InterruptedException ex){
             System.out.println("ERROR" + ex);

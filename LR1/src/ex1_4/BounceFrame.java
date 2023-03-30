@@ -19,12 +19,12 @@ public class BounceFrame extends JFrame {
         this.setTitle("ex1_4.Bounce programm");
         this.canvas = new BallCanvas();
 
-//        ex1_4.Pocket p1 = new ex1_4.Pocket(canvas, 0,0);
-//        canvas.add(p1);
-//        ex1_4.Pocket p2 = new ex1_4.Pocket(canvas, WIDTH,0);
-//        canvas.add(p2);
-//        ex1_4.Pocket p3 = new ex1_4.Pocket(canvas, 0,HEIGHT-80);
-//        canvas.add(p3);
+        Pocket p1 = new Pocket(canvas, 0,0);
+        canvas.add(p1);
+        Pocket p2 = new Pocket(canvas, WIDTH,0);
+        canvas.add(p2);
+        Pocket p3 = new Pocket(canvas, 0,HEIGHT-80);
+        canvas.add(p3);
         Pocket p4 = new Pocket(canvas, WIDTH,HEIGHT-80);
         canvas.add(p4);
 
@@ -84,15 +84,7 @@ public class BounceFrame extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 createBallJoin(Color.BLUE, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
-                createBallJoin(Color.BLUE, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
-                createBallJoin(Color.BLUE, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
-                createBallJoin(Color.BLUE, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
-                createBallJoin(Color.BLUE, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
 
-                createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
-                createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
-                createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
-                createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
                 createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
 
             }
@@ -142,8 +134,5 @@ public class BounceFrame extends JFrame {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-
-
     }
 }
