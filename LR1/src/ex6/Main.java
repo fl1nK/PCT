@@ -21,7 +21,7 @@ public class Main {
 //
 //        thread1.join();
 //        thread2.join();
-        
+
         Thread thread1 = new Thread(()->{
             for (int i = 0; i < 1_000_000; i++) {
                 counter.incrementSync();

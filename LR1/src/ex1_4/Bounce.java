@@ -9,6 +9,5 @@ public class Bounce {
         frame.setVisible(true);
         System.out.println("Thread name = " +
                 Thread.currentThread().getName());
-
     }
 }

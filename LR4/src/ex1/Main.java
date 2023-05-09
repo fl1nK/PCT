@@ -24,6 +24,12 @@ public class Main {
 
         System.out.printf("Execution time (ForkJoin): %d\n", currTimeForkJoin);
 
+        double aver = 0;
+        for (Integer i : res.values()) {
+            aver += i;
+        }
+        System.out.printf("Average word length: %f\n", aver / res.size());
+
         currTime = System.nanoTime();
         HashMap<String, Integer> res2 = SimpleWordCount.processing(words);
         long currTimeSimple = System.nanoTime() - currTime;

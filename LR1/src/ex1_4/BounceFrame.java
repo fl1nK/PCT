@@ -83,9 +83,15 @@ public class BounceFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                createBallJoin(Color.BLUE, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
+                Thread thread1 = new Thread(()->{
+                    createBallJoin(Color.BLUE, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
 
-                createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
+                    createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
+                    createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
+                    createBallJoin(Color.RED, Thread.MIN_PRIORITY, WIDTH / 2, HEIGHT / 2);
+                });
+
+                thread1.start();
 
             }
         });

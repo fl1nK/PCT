@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 public class Main2 {
     public static void main(String[] args) {
-        int size = 2000;
+        int size = 3000;
         Matrix A = new Matrix(size, size);
         Matrix B = new Matrix(size, size);
         A.generateRandomMatrix();
@@ -24,28 +24,28 @@ public class Main2 {
         System.out.println(nThread);
 
         long currTime = System.nanoTime();
-        //SerialAlgorithm(A,B,C, size);
+        SerialAlgorithm(A,B,C, size);
         currTime = System.nanoTime() - currTime;
 
         System.out.println("Time for Serial Algorithm: " + currTime / 1_000_000);
 
         currTime = System.nanoTime();
-        //StripedAlgorithm(A,B,C,2);
+        StripedAlgorithm(A,B,C,2);
         currTime = System.nanoTime() - currTime;
 
-        System.out.println("Time for Striped Algorithm: " + currTime / 1_000_000);
+        System.out.println("Time for Striped Algorithm 2: " + currTime / 1_000_000);
 
         currTime = System.nanoTime();
-        //StripedAlgorithm(A,B,C,4);
+        StripedAlgorithm(A,B,C,4);
         currTime = System.nanoTime() - currTime;
 
-        System.out.println("Time for Striped Algorithm: " + currTime / 1_000_000);
+        System.out.println("Time for Striped Algorithm 4: " + currTime / 1_000_000);
 
         currTime = System.nanoTime();
-        //StripedAlgorithm(A,B,C,6);
+        StripedAlgorithm(A,B,C,6);
         currTime = System.nanoTime() - currTime;
 
-        System.out.println("Time for Striped Algorithm: " + currTime / 1_000_000);
+        System.out.println("Time for Striped Algorithm 6: " + currTime / 1_000_000);
 
         C.matrix = new double[size][size];
 

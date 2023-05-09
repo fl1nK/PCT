@@ -10,14 +10,8 @@ public class Producer implements Runnable {
     }
 
     public void run() {
-//        String importantInfo[] = {
-//                "Mares eat oats",
-//                "Does eat oats",
-//                "Little lambs eat ivy",
-//                "A kid will eat ivy too"
-//        };
 
-        int[] importantInfo = new int[5000];
+        int[] importantInfo = new int[1000];
         for (int i = 0; i < importantInfo.length; i++) {
             importantInfo[i] = i + 1;
         }
@@ -26,7 +20,7 @@ public class Producer implements Runnable {
         for (int i = 0; i < importantInfo.length; i++) {
             drop.put(importantInfo[i]);
             try {
-                Thread.sleep(random.nextInt(10));
+                Thread.sleep(random.nextInt(100));
             } catch (InterruptedException e) {}
         }
         drop.put(0);
