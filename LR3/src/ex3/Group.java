@@ -1,12 +1,11 @@
 package ex3;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class Group {
     private String groupName;
-    public HashMap<Integer, List<String>> groupList = new HashMap<>();
+    public List<Student> groupList = new ArrayList<Student>();
 
     public Group(String groupName, int sizeOfGroup) {
         this.groupName = groupName;
@@ -19,16 +18,18 @@ public class Group {
 
     private void generateGroupList(int sizeOfGroup){
         for (int i = 0; i < sizeOfGroup; i++) {
-            this.groupList.put(i+1, new ArrayList<>());
+            this.groupList.add(new Student(i+1));
         }
     }
 
     @Override
     public String toString() {
+        List<Student> studentList = groupList;
+
         System.out.println(groupName);
-        for (int i = 1; i <= groupList.size(); i++) {
-            System.out.println("studentID = " + i + " " + groupList.get(i));
-        }
+            for (Student student : studentList) {
+                System.out.println("studentID = " + student.getId() + " " + student.getArrayList());
+            }
         return "";
     }
 }

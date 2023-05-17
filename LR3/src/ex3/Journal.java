@@ -1,6 +1,7 @@
 package ex3;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class Journal {
     public HashMap<String, Group> groups = new HashMap<>();
@@ -15,9 +16,12 @@ public class Journal {
         this.groups.put(group3.getGroupName(), group3);
     }
 
-    public void addMark(String groupName, Integer studentID, String mark) {
-        synchronized (this.groups.get(groupName).groupList.get(studentID)) {
-            this.groups.get(groupName).groupList.get(studentID).add(mark);
+    public synchronized void addMark(String groupName, int id, String mark) {
+        List<Student> studentList = this.groups.get(groupName).groupList;
+        for (Student student : studentList) {
+            if (student.getId() == id) {
+                student.arrayList.add(mark);
+            }
         }
     }
 

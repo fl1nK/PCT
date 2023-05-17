@@ -5,7 +5,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         Journal journal = new Journal();
-        int nWeeks = 6;
+        int nWeeks = 20;
 
         Teacher teacher = new Teacher("Lecturer 1", List.of("ІT-01", "ІT-02", "ІT-03"), nWeeks, journal);
         Teacher assistant1 = new Teacher("Assistant 1", List.of("ІT-01", "ІT-02", "ІT-03"), nWeeks, journal);

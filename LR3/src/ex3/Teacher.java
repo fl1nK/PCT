@@ -19,9 +19,9 @@ public class Teacher extends Thread {
     public void run() {
         for (int i = 0; i < nWeeks; i++) {
             for (String groupName : groupNames) {
-                for (Integer studentID : this.journal.groups.get(groupName).groupList.keySet()) {
+                for (int j = 1; j <= this.journal.groups.get(groupName).groupList.size(); j++) {
                     int mark = (int) ((Math.round(100 * Math.random() * 100)) / 100);
-                    journal.addMark(groupName, studentID, mark + " (" + this.teacherName + " - Week "+ (i+1) + ")");
+                    journal.addMark(groupName, j, mark + " (" + this.teacherName + " - Week "+ (i+1) + ")");
                 }
             }
         }
